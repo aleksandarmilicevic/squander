@@ -12,26 +12,46 @@ Executable specifications for Java programs
   * easy to specify and solve constraint problems
   
 ```java
-/*
- * Graph k-Coloring problem: assign up to k different colors to graph nodes
- * such that no two adjacent nodes have the same color.
- */
-@Ensures({
-    "return.keys = this.nodes.elts", 
-    "all c : return.vals | c > 0 && c <= k",
-    "all e : this.edges.elts | return.elts[e.src] != return.elts[e.dst]"
-})
-@Modifies("return.elts")
-@Options(ensureAllInts=true)
-@FreshObjects(cls = Map.class, typeParams={Node.class, Integer.class}, num = 1)
-public Map<Node, Integer> color(int k) {
-    return Squander.exe(this, k);
-}
+class Graph {
+  class Node {
+    public final int label;
+    public Node(int label) { this.label = label; }
+  }
+  
+  class Edge {
+    public final Node src, dest;
+    public final int cost;
+    public Edge(Node src, Node dest, int cost) {
+        this.src = src;
+        this.dest = dest;
+        this.cost = cost;
+    } 
+  }
+  
+  private Set<Node> nodes = new LinkedHashSet<Node>();
+  private Set<Edge> edges = new LinkedHashSet<Edge>();
+  
+  /*
+   * Graph k-Coloring problem: assign up to k different colors to graph nodes
+   * such that no two adjacent nodes have the same color.
+   */
+  @Ensures({
+      "return.keys = this.nodes.elts", 
+      "all c : return.vals | c > 0 && c <= k",
+      "all e : this.edges.elts | return.elts[e.src] != return.elts[e.dst]"
+  })
+  @Modifies("return.elts")
+  @Options(ensureAllInts=true)
+  @FreshObjects(cls = Map.class, typeParams={Node.class, Integer.class}, num = 1)
+  public Map<Node, Integer> color(int k) {
+      return Squander.exe(this, k);
+  }
     
-public static void main(String[] args) {
-    Graph g = readGraph(args[0]); // reads graph from file
-    int k = Integer.parseInt(args[1]);
-    Map<Node, Integer> colors = g.color(k);
-    System.out.println(colors);
-}  
+  public static void main(String[] args) {
+      Graph g = readGraph(args[0]); // reads graph from file
+      int k = Integer.parseInt(args[1]);
+      Map<Node, Integer> colors = g.color(k);
+      System.out.println(colors);
+  }  
+}
 ```  
