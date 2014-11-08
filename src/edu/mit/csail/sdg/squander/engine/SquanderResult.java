@@ -17,7 +17,7 @@ import kodkod.util.collections.IdentityHashSet;
 import edu.mit.csail.sdg.squander.absstate.FieldValue;
 import edu.mit.csail.sdg.squander.absstate.ObjTuple;
 import edu.mit.csail.sdg.squander.absstate.ObjTupleSet;
-import edu.mit.csail.sdg.squander.serializer.special.ObjSerFactory;
+import edu.mit.csail.sdg.squander.serializer.impl.ObjSerFactory;
 import edu.mit.csail.sdg.squander.spec.ForgeScene;
 import edu.mit.csail.sdg.squander.spec.JField;
 import edu.mit.csail.sdg.squander.utils.Utils;

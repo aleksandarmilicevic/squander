@@ -17,7 +17,7 @@ import java.lang.reflect.Field;
  * @author drayside
  *
  */
-public class ConsoleHeap implements HeapListener {
+public class ConsoleHeapListener implements HeapListener {
 
     @Override
     public void newObject(final Object obj) {

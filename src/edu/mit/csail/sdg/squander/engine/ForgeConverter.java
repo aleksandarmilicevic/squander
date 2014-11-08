@@ -28,7 +28,7 @@ import edu.mit.csail.sdg.squander.engine.Heap2Bounds.Pair;
 import edu.mit.csail.sdg.squander.engine.ISquanderResult.IEvaluator;
 import edu.mit.csail.sdg.squander.log.Log;
 import edu.mit.csail.sdg.squander.serializer.AbstractHeapListener;
-import edu.mit.csail.sdg.squander.serializer.special.ObjSerFactory;
+import edu.mit.csail.sdg.squander.serializer.impl.ObjSerFactory;
 import edu.mit.csail.sdg.squander.spec.ClassSpec;
 import edu.mit.csail.sdg.squander.spec.ForgeScene;
 import edu.mit.csail.sdg.squander.spec.JField;

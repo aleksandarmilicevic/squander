@@ -2,7 +2,7 @@
  * This module is in charge of serializing and deserializing objects (i.e. it provides abstraction and concretization functions for several types of classes). 
  * @{ 
  */
-package edu.mit.csail.sdg.squander.serializer.special;
+package edu.mit.csail.sdg.squander.serializer.impl;
 
 import java.lang.reflect.Array;
 import java.util.LinkedList;

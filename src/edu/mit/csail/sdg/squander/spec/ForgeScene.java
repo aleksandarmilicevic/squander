@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.Map.Entry;
 
-import edu.mit.csail.sdg.squander.serializer.special.ArraySer;
+import edu.mit.csail.sdg.squander.serializer.impl.ArraySer;
 import edu.mit.csail.sdg.squander.spec.constant.ConstRels;
 import edu.mit.csail.sdg.squander.utils.Counter;
 import edu.mit.csail.sdg.squander.utils.Utils;

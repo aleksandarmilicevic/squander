@@ -1,4 +1,4 @@
-package edu.mit.csail.sdg.squander.serializer.special;
+package edu.mit.csail.sdg.squander.serializer.impl;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

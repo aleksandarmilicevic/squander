@@ -16,15 +16,14 @@ import edu.mit.csail.sdg.squander.absstate.FieldValue;
 import edu.mit.csail.sdg.squander.absstate.ObjTuple;
 import edu.mit.csail.sdg.squander.absstate.ObjTupleSet;
 import edu.mit.csail.sdg.squander.options.SquanderGlobalOptions;
-import edu.mit.csail.sdg.squander.serializer.special.IObjSer;
-import edu.mit.csail.sdg.squander.serializer.special.ObjSerFactory;
+import edu.mit.csail.sdg.squander.serializer.impl.IObjSer;
+import edu.mit.csail.sdg.squander.serializer.impl.ObjSerFactory;
 import edu.mit.csail.sdg.squander.spec.ClassSpec;
 import edu.mit.csail.sdg.squander.spec.JType;
 import edu.mit.csail.sdg.squander.spec.JavaScene;
 import edu.mit.csail.sdg.squander.spec.JType.Unary;
 import edu.mit.csail.sdg.squander.utils.Utils;
 import forge.program.ForgeVariable;
-
 import kodkod.util.collections.IdentityHashSet;
 
 // ==========================================================
