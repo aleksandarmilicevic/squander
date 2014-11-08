@@ -62,6 +62,5 @@ ant init-eclipse-compiler # might require sudo, if your ANT is installed e.g., i
 # ---------------------------------------------------------------------------
 ant build-eclipse-compiler
 ant test # runs all unit tests
-
-ant 
+and jar  # creates dist/squander.jar
 ```
