@@ -3,7 +3,7 @@ squander
 
 Website: http://people.csail.mit.edu/aleks/squander/
 
-Executable specifications for Java programs
+### Executable specifications for Java programs
 
   * unified execution of imperative and declarative code
   * executable Alloy-like specifications for Java programs
@@ -51,3 +51,17 @@ class Graph {
   }  
 }
 ```  
+
+### Download & Install
+```bash
+git clone https://github.com/aleksandarmilicevic/squander.git
+cd squander
+# -- initialize ANT to use Eclipse compiler (*needs to be done only once*) --
+export ECLIPSE_HOME="<your-eclipse-home>"
+ant init-eclipse-compiler # might require sudo, if your ANT is installed e.g., in /usr/share
+# ---------------------------------------------------------------------------
+ant build-eclipse-compiler
+ant test # runs all unit tests
+
+ant 
+```
