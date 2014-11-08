@@ -27,7 +27,7 @@ public class SquanderGlobalOptions {
     
     public Level log_level = Level.DEBUG;
     public Engine engine = Engine.Kodkod;
-    public SATFactory sat_solver = SATFactory.MiniSat; //SATFactory.DefaultSAT4J; //SATFactory.MiniSat;  //SATFactory.MiniSatExternal;
+    public SATFactory sat_solver = SATFactory.DefaultSAT4J; //SATFactory.MiniSat;
 
     /** forbid overflow */
     public boolean noOverflow = true;
