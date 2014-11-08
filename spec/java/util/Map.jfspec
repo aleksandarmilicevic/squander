@@ -1,0 +1,14 @@
+interface Map<K,V> {
+
+    @SpecField("elts   : K -> V")
+
+    @SpecField("length : one int | this.length = #this.elts")
+    @SpecField("keys   : set K   | this.keys = this.elts.V")
+    @SpecField("vals   : set V   | this.vals = this.elts[K]")
+    
+    @Invariant({
+        "null !in this.elts.V",
+        "all k : K | k in this.elts.V => one this.elts[k]"
+    })  
+    
+}

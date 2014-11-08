@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<projection> <type name="Projection"/> </projection>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="Int"/>
+   <type name="Projection"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+   <set name="Projection__projection" type="State"/>
+</node>
+
+<node color="White">
+   <type name="Node"/>
+</node>
+
+<node shape="Box" color="Blue" label="">
+   <set name="$BlueBox" type="Node"/>
+</node>
+
+<node shape="Box" color="Green" label="">
+   <set name="$GreenBox" type="Node"/>
+</node>
+
+<node shape="Box" color="Red" label="">
+   <set name="$RedBox" type="Node"/>
+</node>
+
+<node shape="Box" color="Yellow" label="">
+   <set name="$YellowBox" type="Node"/>
+</node>
+
+<node shape="Circle" color="Blue" label="">
+   <set name="$BlueCircle" type="Node"/>
+</node>
+
+<node shape="Circle" color="Green">
+   <set name="$GreenCircle" type="Node"/>
+</node>
+
+<node shape="Circle" color="Red" label="">
+   <set name="$RedCircle" type="Node"/>
+</node>
+
+<node shape="Circle" color="Yellow" label="">
+   <set name="$YellowCircle" type="Node"/>
+</node>
+
+<node shape="Dbl Circle" color="Gray">
+   <type name="Visual"/>
+</node>
+
+<node shape="Hexagon" color="Blue" label="">
+   <set name="$BlueHexagon" type="Node"/>
+</node>
+
+<node shape="Hexagon" color="Green" label="">
+   <set name="$GreenHexagon" type="Node"/>
+</node>
+
+<node shape="Hexagon" color="Red" label="">
+   <set name="$RedHexagon" type="Node"/>
+</node>
+
+<node shape="Hexagon" color="Yellow" label="">
+   <set name="$YellowHexagon" type="Node"/>
+</node>
+
+<node shape="Inv Trapezoid" color="Black">
+   <type name="Chameleon"/>
+</node>
+
+<node visible="no">
+   <type name="Bool"/>
+   <type name="Chameleons"/>
+   <type name="Color"/>
+   <type name="Edge"/>
+   <type name="Kind"/>
+   <type name="Shape"/>
+   <type name="State"/>
+</node>
+
+<node visible="no" numberatoms="no">
+   <type name="Theme"/>
+</node>
+
+<node visible="yes" label="">
+   <set name="Visual__projections" type="Visual"/>
+</node>
+
+<edge label="atom">
+   <relation name="Projection__atom"> <type name="Node"/> <type name="Chameleon"/> </relation>
+</edge>
+
+<edge visible="no">
+   <relation name="Projection__destination"> <type name="Edge"/> <type name="Node"/> </relation>
+   <relation name="Projection__source"> <type name="Edge"/> <type name="Node"/> </relation>
+   <relation name="Visual__allEdges"> <type name="Visual"/> <type name="Edge"/> </relation>
+   <relation name="Visual__allNodes"> <type name="Visual"/> <type name="Node"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="$pkind"> <type name="Chameleon"/> <type name="Kind"/> </relation>
+   <relation name="$prOrd"> <type name="Visual"/> <type name="Int"/> </relation>
+   <relation name="Projection__color"> <type name="Node"/> <type name="Color"/> </relation>
+   <relation name="Projection__shape"> <type name="Node"/> <type name="Shape"/> </relation>
+</edge>
+
+</view>
+
+</alloy>

@@ -1,0 +1,7 @@
+interface Set<K> {
+
+    @SpecField("elts   : set K")
+
+    @SpecField("length : one int | this.length = #this.elts")
+    
+}

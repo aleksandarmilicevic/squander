@@ -1,0 +1,8 @@
+interface Class {
+
+    @SpecField("name       : one String")
+    @SpecField("simpleName : one String");
+    @SpecField("fields     : set edu.mit.csail.sdg.squander.ast.AField")
+    @SpecField("funcs      : set edu.mit.csail.sdg.squander.ast.AFunc")
+
+}

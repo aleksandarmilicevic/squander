@@ -1,0 +1,5 @@
+interface Constructor {
+
+    @SpecField("name: one String")
+    
+}

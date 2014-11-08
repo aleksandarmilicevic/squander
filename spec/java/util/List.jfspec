@@ -1,0 +1,14 @@
+interface List<E> {
+
+    @SpecField("elts  : int -> E")
+
+    @SpecField("length: one int | this.length = #this.elts")    
+    @SpecField("prev : E -> E | this.prev = (~this.elts) . DEC . (this.elts)")
+    @SpecField("next : E -> E | this.next = (~this.elts) . INC . (this.elts)")
+        
+    @Invariant({
+        "this.length >= 0",
+        "all i : int | (i < this.length && i >= 0) ? one this.elts[i] : no this.elts[i]"
+    })    
+    
+}

@@ -1,0 +1,5 @@
+interface Field {
+ 
+    @SpecField("name: one String")
+
+}

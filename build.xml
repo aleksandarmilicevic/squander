@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: pse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="Squander">
+    <property environment="env"/>
+	
+	<property name="LD_PATH" value="./lib/amd64-linux"/>
+	
+	<property name="bin.location" value="./bin"/>
+	<property name="lib.location" value="./lib"/>
+	<property name="dist.location" value="./dist"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.6"/>
+    <property name="source" value="1.6"/>
+    <path id="squander.classpath">
+        <pathelement location="${bin.location}"/>
+    	<fileset dir="${lib.location}" includes="*.jar" />
+    </path>
+    <target name="init">
+        <mkdir dir="${bin.location}"/>
+        <copy includeemptydirs="false" todir="${bin.location}">
+            <fileset dir="spec">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="${bin.location}">
+            <fileset dir="src">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+                <exclude name="squander/engine/old/"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="${bin.location}">
+            <fileset dir="examples">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+        <copy includeemptydirs="false" todir="${bin.location}">
+            <fileset dir="tests">
+                <exclude name="**/*.launch"/>
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="${bin.location}"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="${bin.location}" source="${source}" target="${target}">
+            <src path="spec"/>
+            <classpath refid="squander.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="${bin.location}" source="${source}" target="${target}">
+            <src path="src"/>
+            <exclude name="squander/engine/old/"/>
+            <classpath refid="squander.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="${bin.location}" source="${source}" target="${target}">
+            <src path="examples"/>
+            <classpath refid="squander.classpath"/>
+        </javac>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="${bin.location}" source="${source}" target="${target}">
+            <src path="tests"/>
+            <classpath refid="squander.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${lib.location}" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${lib.location}" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target description="create squander.jar" name="jar" depends="build-eclipse-compiler">
+        <mkdir dir="${dist.location}"/>
+    	<jar destfile="${dist.location}/squander.jar" basedir="${bin.location}">
+    	    <manifest>
+    	    	 <attribute name="Manifest-Version" value="1.0"/>
+    	    </manifest>
+    	</jar>
+    </target>
+    <target description="run JUnit tests" name="test">
+        <junit fork="yes">
+            <classpath refid="squander.classpath"/>
+        	<jvmarg value="-ea" />
+        	<jvmarg value="-Djava.library.path=${LD_PATH}" />
+            <formatter type="brief" usefile="false" />
+            <batchtest>
+                   <fileset dir="${bin.location}" includes="**/*Test.class" />
+            </batchtest>
+        </junit>
+    </target>
+    
+</project>

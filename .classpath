@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="spec"/>
+	<classpathentry excluding="squander/engine/old/|edu/mit/csail/sdg/squander/engine/old/" kind="src" path="src">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="squander/lib/amd64-linux"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="examples"/>
+	<classpathentry kind="src" path="benchmarks"/>
+	<classpathentry kind="src" path="tests"/>
+	<classpathentry kind="src" path="experimental"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/lib-sdg/jars-external/junit-4.7.jar"/>
+	<classpathentry exported="true" kind="lib" path="/lib-sdg/jars-sdg/forge.jar"/>
+	<classpathentry kind="lib" path="/lib-sdg/jars-external/antlr-runtime-3.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="/lib-sdg/jars-external/paranamer-2.2.jar"/>
+	<classpathentry kind="lib" path="/lib-sdg/jars-sdg/sdg-util-independent.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/kodkod"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/jfsl-annotations"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

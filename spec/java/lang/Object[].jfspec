@@ -1,0 +1,15 @@
+interface Object[]<E> {
+
+    @SpecField("elts  : int -> E")
+    @SpecField("length : one int")
+    
+    @SpecField("vals   : set E | this.vals  = this.elts[int]")
+    @SpecField("first  : one E | this.first = this.elts[0]")
+    @SpecField("last   : one E | this.last  = this.elts[this.length - 1]") 
+   
+    @Invariant({
+        "this.length >= 0",
+        "all i : int | (i < this.length && i >= 0) ? one this.elts[i] : no this.elts[i]"
+    })    
+    
+}
