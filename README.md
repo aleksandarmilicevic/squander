@@ -27,7 +27,7 @@ class Graph {
   private Set<Node> nodes = new LinkedHashSet<Node>();
   private Set<Edge> edges = new LinkedHashSet<Edge>();
   
-  /*
+  /**
    * Graph k-Coloring problem: assign up to k different colors to graph nodes
    * such that no two adjacent nodes have the same color.
    */
