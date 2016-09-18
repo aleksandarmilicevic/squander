@@ -146,7 +146,7 @@ public class Theme {
     
     protected static void generateAlloyVizInstance(final Theme th) throws IOException {
         th.dummy();
-        File f = new File("/home/aleks/work/scraps/theme/myinst.xml");
+        File f = new File("myinst.xml");
         PrintStream ps = new PrintStream(f); //System.out; 
              
         // add skolem functions for vizualization
