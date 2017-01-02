@@ -1,0 +1,7 @@
+Traditional formal methods and modern agile methods are separated more
+by limitations of current technology than by fundamental intellectual
+differences. A mixed interpreter that executes mixed programs,
+comprising both declarative specification statements and regular
+imperative statements, might bridge the gap. This paper explores how
+such an interpreter might be used, showing by example how it might
+support a variety of development activities.

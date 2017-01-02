@@ -1,0 +1,268 @@
+/* greg01 css
+released under creative commons attribution license - please keep the 'designed by' link in the footer */
+
+html, body {
+	height: 100%;
+	margin: 0;
+	font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;
+}
+
+#container {
+	min-height: 100%;
+	position: relative;
+}
+* html #container {
+	height: 100%;
+}
+
+em {
+  font-weight: bold;
+  color: #EF4C2C; /*F8B324;*/
+  font-style: normal;
+}
+
+.sq {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+/* header stuff */
+
+#header {
+	background: url(images/header-bg.gif) #4e6b8e;
+	width: 100%;
+	height: 150px;
+	margin: 0;
+	padding: 0;
+	border-bottom: 4px solid #636363;
+}
+
+#header h1, #header h2 {
+	width: 860px;
+	margin: 0 auto;
+	font-weight: normal;
+	color: #fff;
+}
+
+#header h1 {
+	padding-top: 40px;
+	font-size:  40pt;
+}
+
+#header h2 {
+	margin-top: -10px;
+	font-size: 14pt;
+}
+
+#header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#header a:hover {
+	color: #fbe4b5;
+}
+
+/* horizontal menu */
+
+#menu-h {
+	background: url(images/menu-h-bg.gif) #fff;
+	width: 100%;
+	height: 58px;
+	margin: 0;
+	padding: 0;
+}
+
+#menu-h ul {
+	width: 860px;
+	margin: 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+#menu-h li {
+	float: left;
+}
+
+#menu-h a {
+	height: 27px;
+	background: transparent;
+	display: block;
+	float: left;
+	margin: 0 auto;
+	padding: 3px 20px 0 20px;
+	color: #636363;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#menu-h a:hover {
+	background: transparent url(images/menu-h-bg-invert.gif);
+}
+
+#menu-h .active {
+	color: #60758f;
+	text-decoration: underline;
+}
+
+/* main content container */
+
+#main {
+	width: 860px;
+	margin: 0 auto;
+	margin-bottom: 70px;
+	margin-top: 10px;
+	line-height: 1.7em;
+}
+
+#main h1, #main h2 {
+	border-bottom: 3px solid #43648d;
+	width: 100%;
+	color: #43648d;
+}
+
+/* main content */
+
+#content {
+	width: 660px;
+	float: left;
+	margin-right: 40px;
+	color: #5c738f;
+}
+
+#content p {
+	font-size: 12pt;
+}
+
+#content blockquote {
+	font-size: 10pt;
+	border-left: 3px solid #f8b832;
+	padding: 0 10px 0 10px;
+	background-color: #eef; /* url(images/quote.gif) no-repeat bottom right; */
+}
+
+.code {
+    font-size: 10pt;
+    border-left: 3px solid #f8b832;
+    padding: 0 5px 0 10px;
+    margin-left: 5px;
+    background-color: #eef; /* url(images/quote.gif) no-repeat bottom right; */
+    line-height: 1.3em;
+}
+
+#content ul {
+    font-size: 12pt;
+}
+
+ul#big {
+    font-size: 14pt; 
+}
+
+ul#publist li {
+  margin-top: 20pt;
+}
+
+#content a {
+	color: #43648d;
+	border-bottom: 1px solid #f8b832;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#content a:hover {
+	border-bottom: none;
+}
+
+.emph {
+    font-weight: bold;
+    font-style: italic;
+}
+
+#content img {
+
+}
+
+/* right menu */
+
+#menu-v {
+	width: 160px;
+	float: left;
+	color: #5c738f;
+}
+
+#menu-v ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#menu-v a {
+	width: 160px;
+	border-bottom: 1px solid yellow;
+	display: block;
+	text-decoration: none;
+	color: #5c738f;
+	
+}
+
+#menu-v a:hover {
+	background: #eef;
+}
+
+#menu-v p {
+	font-size: 10pt;
+}
+
+/* footer */
+
+#footer {
+	background: #4e6b8e;
+	height: 75px;
+	color: #f8b832;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	position: relative;
+	margin-top: -65px;
+	clear: both;
+}
+
+#footer p {
+	text-align: center;
+	font-size: 9pt;
+	margin: 0;
+}
+
+#footer a {
+	color: #fac353;
+	text-decoration: underline;
+}
+
+#footer a:hover {
+	text-decoration: none;
+}
+
+/* misc */
+
+.clear {
+	clear: both;
+	margin: 0;
+	padding: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.left {
+	float: left;
+	margin-right: 10px;
+}
+
+.right {
+	float: right;
+	margin-left: 10px;
+}
+
+span.papertitle {
+	color: #a87e2b;
+	font-weight: bold;
+}
